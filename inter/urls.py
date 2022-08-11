@@ -20,5 +20,5 @@ from inter import viesw
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/',viesw.allabout),
-    path('home/',viesw.home)
+    path('',viesw.home)
 ]
