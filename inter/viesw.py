@@ -7,8 +7,8 @@ import io
 import urllib,base64
 
 
-x=np.random.randint(1,100,100)
-y=3*x+np.random.randint(1,100,100)
+x=np.random.randint(10,100,100)
+y=3*x+np.random.randint(10,100,100)
 
 data={
     'one':'Home',
