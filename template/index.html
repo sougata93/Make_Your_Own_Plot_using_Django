@@ -1,14 +1,73 @@
 <html>
 <head></head>
 <body>
-<h1> Hello Index</h1>
 
-<h1>no sql</h1>
-<img src="/static/fig1.png" alt="" height="250", width="350">
+<style>  
+body {  
+font-size: 100%;  
+}  
+h1 { font-family: sans-serif;
+text-align:center }  
+h2 { font-family: serif; }   
 
-<div>
+table, th, td {  
+    border: 1px solid black;  
+    border-collapse: collapse;  
+}  
+th, td {  
+    padding: 10px;  
+}  
+table#alter tr:nth-child(even) {  
+    background-color: #eee;  
+}  
+table#alter tr:nth-child(odd) {  
+    background-color: #fff;  
+}  
+table#alter th {  
+    color: white;  
+    background-color: gray;  
+}  
 
-</div>
+p { font-family: monospace;
+	font-size:large}   
+
+
+img{   
+margin-left:auto;  
+margin-right:auto;  
+} 
+
+#img1{  
+margin-left:auto;  
+margin-right:auto;
+display:block;  
+}  
+
+</style>  
+
+<h1> RANDOM NUMBERS AND PLOT</h1>
+
+<table id="alter">  
+<tr><th><p>Variables</p></th><th><p>Numbers</p></th><th><p>Generation</p></th></tr>
+<tr><td><p>X</p></td><td>
+<p>
+{% for i in lst1 %}
+{{i}}
+{% endfor %}
+</p>
+</td>
+<td><p>RANDOM(1,100,100)</p></td></tr>  
+<tr><td><p>Y</p></td><td>
+<p>
+{% for i in lst2 %}
+{{i}}
+{% endfor %}
+</p>
+</td><td><p>3*X+RANDOM(1,100,100)</p></td></tr>    
+</table> 
+
+<img id="img1" src="/static/fig2.png" alt="" height="250", width="350">
+
 </body>
 
 

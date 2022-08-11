@@ -7,20 +7,20 @@ import io
 import urllib,base64
 
 
-
+x=np.random.randint(1,100,100)
+y=3*x+np.random.randint(1,100,100)
 
 data={
     'one':'Home',
     'two':'town',
-    'lst':[1,2,3,4,5],
-    'rand':np.random.randint(1,10,23)
+    'lst1':x,
+    'lst2':y
 }
 
-x=np.random.randint(1,10,100)
-y=np.random.randint(1,10,100)
+
 
 plt.scatter(x,y, marker='+' ,color='r')
-plt.savefig('C:/Users/souga/Documents/dj/inter/static/fig1.png')
+plt.savefig('C:/Users/souga/Documents/GitHub/Make_Your_Own_Plot_using_Django/static/fig2.png')
 
 
 def allabout(request):
