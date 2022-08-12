@@ -20,7 +20,7 @@ data={
 
 
 plt.scatter(x,y, marker='+' ,color='r')
-plt.savefig('C:/Users/souga/Documents/GitHub/Make_Your_Own_Plot_using_Django/static/fig2.png')
+plt.savefig('C:/Users/admin/Documents/GitHub/Make_Your_Own_Plot_using_Django/static/fig2.png')
 
 
 def allabout(request):
@@ -29,3 +29,21 @@ def allabout(request):
 def home(request):
    
     return render(request,"index.html",data)
+
+
+def myform(request):
+    res=0
+    dta={}
+    try:
+        if request.method=="POST":
+            n1=int(request.POST.get('num1'))
+            n2=int(request.POST.get('num2'))
+            res=n1+n2
+            dta={
+                'n1':n1,
+                'n2':n2,
+                'output':res
+            }
+    except:
+        pass
+    return render(request,"myform.html",dta)

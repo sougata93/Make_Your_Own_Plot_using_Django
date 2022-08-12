@@ -1,0 +1,71 @@
+<html>
+<head></head>
+<body>
+
+<style>  
+body {  
+font-size: 100%;  
+}  
+h1 { font-family: sans-serif;
+text-align:center }  
+h2 { font-family: serif; }   
+
+table, th, td {  
+    border: 1px solid black;  
+    border-collapse: collapse;  
+}  
+th, td {  
+    padding: 10px;  
+}  
+table#alter tr:nth-child(even) {  
+    background-color: #eee;  
+}  
+table#alter tr:nth-child(odd) {  
+    background-color: #fff;  
+}  
+table#alter th {  
+    color: white;  
+    background-color: gray;  
+}  
+
+p { font-family: monospace;
+	font-size:large}   
+
+
+img{   
+margin-left:auto;  
+margin-right:auto;  
+} 
+
+#img1{  
+margin-left:auto;  
+margin-right:auto;
+display:block;  
+}  
+
+</style>  
+
+<h1> CALCULATOR</h1>
+
+<div>
+    <form method="post">
+        {% csrf_token%}
+        <p>
+      <label for="">Value1</label>
+      <input type="text" name="num1" value="{{n1}}">
+  
+      <label for="">Value2</label>
+      <input type="text" name="num2" value="{{n2}}">
+      <button type="submit">ADD</button>
+        </p>
+        <p>OUTPUT:{{output}}</p>
+        
+     
+    </form>
+  </div>
+
+</body>
+
+
+
+</html>
